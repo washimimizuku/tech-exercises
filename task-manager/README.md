@@ -23,7 +23,7 @@ The arguments for the command are:
 python main.py {limit} [--fifo] [--by_priority]
 ```
 
-- Limit (mandatory): Maximum number of processes
+- Limit (mandatory): Maximum number of processes.
 - --fifo (optional): When maximum number of processes is reached, replace the oldest process with the new one.
 - --by_priority (optional): When maximum number of processes is reached, replace a lower priority process with the new one.
 
@@ -39,3 +39,5 @@ The shell supports the following commands:
 - killgroup {priority} - Kills all processes that have the given priority. Priority must be one of: [low, medium, high].
 - killall - Kills all processes.
 - quit - Quits the interactive shell.
+
+Note: The output of the processes will be logged on the file task_manager.log
