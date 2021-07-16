@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 
-import logging
-import multiprocessing
-import os
 import sys
-import time
 
 from task_manager import TaskManager
 from process import Process
@@ -22,8 +18,12 @@ if __name__ == '__main__':
         action = input('> ')
 
         if action[:4] == "add ":
-            level = action.split()[1]
-            task_manager.add_process(level)
+            priority = action.split()[1]
+            if (priority != "low" and priority != "medium" and priority != "high"):
+                print(
+                    f"Priority '{priority}' is not valid. Please choose one of [low, medium, high].")
+            else:
+                task_manager.add_process(priority)
 
         elif action == "list":
             task_manager.list_processes()
@@ -34,7 +34,11 @@ if __name__ == '__main__':
 
         elif action[:10] == "killgroup ":
             priority = action.split()[1]
-            task_manager.kill_processes(priority)
+            if (priority != "low" and priority != "medium" and priority != "high"):
+                print(
+                    f"Priority '{priority}' is not valid. Please choose one of [low, medium, high].")
+            else:
+                task_manager.kill_processes(priority)
 
         elif action == "killall":
             task_manager.kill_all_processes()
@@ -44,4 +48,4 @@ if __name__ == '__main__':
             break
 
         else:
-            print("Command not found, try again")
+            print("Command not found, try again.")
