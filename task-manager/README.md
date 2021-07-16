@@ -4,6 +4,10 @@ A simple task manager to manage system processes.
 
 ## Installation
 
+The project is done to run with Python 3.9 or above, using pipenv. It was not tested on lower versions of Python, but it should work with any 3.\* version. In the case you want to test it with another version, please change the version on the Pipfile file.
+
+If pipenv is not installed, please use the following instructions: https://pipenv.pypa.io/en/latest/#install-pipenv-today
+
 ```
 pipenv shell
 pipenv install
