@@ -1,6 +1,6 @@
 # Task Manager
 
-A simple task manager to manager system processes.
+A simple task manager to manage system processes.
 
 ## Installation
 
